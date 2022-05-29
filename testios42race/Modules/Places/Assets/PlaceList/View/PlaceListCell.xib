@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceListCell" rowHeight="68" id="kg3-7C-PVM" customClass="PlaceListCell" customModule="testios42race" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kg3-7C-PVM" id="IGt-oo-YHW">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hY8-Wa-fSJ">
+                        <rect key="frame" x="16" y="16" width="44.5" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9J-RX-fcH">
+                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp9-Sx-WcB">
+                                <rect key="frame" x="0.0" y="20.5" width="44.5" height="15.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hY8-Wa-fSJ" firstAttribute="centerY" secondItem="IGt-oo-YHW" secondAttribute="centerY" id="DMN-Ww-jTl"/>
+                    <constraint firstItem="hY8-Wa-fSJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IGt-oo-YHW" secondAttribute="top" constant="16" id="ReY-WG-M3d"/>
+                    <constraint firstItem="hY8-Wa-fSJ" firstAttribute="leading" secondItem="IGt-oo-YHW" secondAttribute="leading" constant="16" id="YbW-Ll-JDg"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hY8-Wa-fSJ" secondAttribute="bottom" constant="16" id="rWm-ej-lJg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="placeAddressLbl" destination="hp9-Sx-WcB" id="96V-aO-XOz"/>
+                <outlet property="placeNameLbl" destination="a9J-RX-fcH" id="TtR-RM-Zj7"/>
+            </connections>
+            <point key="canvasLocation" x="8.6956521739130448" y="100.44642857142857"/>
+        </tableViewCell>
+    </objects>
+</document>
