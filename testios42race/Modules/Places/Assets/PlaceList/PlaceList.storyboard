@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jek-s7-duo">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P64-yC-gOA">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" id="Xyq-Yd-APk">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
@@ -25,9 +25,44 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GCO-Hd-d7E">
-                                        <rect key="frame" x="0.0" y="51" width="320" height="517"/>
+                                        <rect key="frame" x="0.0" y="51" width="320" height="410"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kv-q6-uXp">
+                                        <rect key="frame" x="0.0" y="461" width="320" height="63"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0ZS-vA-Jhv">
+                                                <rect key="frame" x="16" y="16" width="320" height="31"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uC1-QT-ml6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Search by | Name"/>
+                                                        <connections>
+                                                            <action selector="didTapSearchBy:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h4Z-Lf-RAt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="RYg-nc-oGh">
+                                                        <rect key="frame" x="168" y="0.0" width="152" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Sort by | Distance"/>
+                                                        <connections>
+                                                            <action selector="didTapSortBy:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="N72-sa-XwI"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="0ZS-vA-Jhv" secondAttribute="bottom" constant="16" id="Bm0-fN-PjG"/>
+                                            <constraint firstAttribute="trailing" secondItem="0ZS-vA-Jhv" secondAttribute="trailing" constant="16" id="X8n-IR-R8O"/>
+                                            <constraint firstItem="0ZS-vA-Jhv" firstAttribute="leading" secondItem="8kv-q6-uXp" secondAttribute="leading" constant="16" id="YYA-rw-Uv6"/>
+                                            <constraint firstItem="0ZS-vA-Jhv" firstAttribute="top" secondItem="8kv-q6-uXp" secondAttribute="top" constant="16" id="c6M-q7-aT8"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -40,14 +75,35 @@
                             <constraint firstItem="P64-yC-gOA" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="o6J-dj-QGg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="O4p-Dg-HtS"/>
                     <connections>
                         <outlet property="searchBar" destination="Xyq-Yd-APk" id="iFy-Qb-7ii"/>
+                        <outlet property="searchByBtn" destination="uC1-QT-ml6" id="0Ag-zL-RPq"/>
+                        <outlet property="sortByBtn" destination="RYg-nc-oGh" id="rV4-vW-nFf"/>
                         <outlet property="tableView" destination="GCO-Hd-d7E" id="5eJ-o0-4Ft"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+            <point key="canvasLocation" x="1016.25" y="97.183098591549296"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ibP-kt-EXX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jek-s7-duo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4jz-0M-yrX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Emw-Ux-PRB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XLS-rX-fBU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.75" y="97.183098591549296"/>
         </scene>
     </scenes>
     <resources>

@@ -6,3 +6,13 @@
 //
 
 import Foundation
+struct PlaceDetailModel : Codable {
+    let id: String
+    let name: String
+    let address: String
+    let img : String
+    let hoursOfOperation : String
+    let rating : Float
+    let phone : String
+    
+}

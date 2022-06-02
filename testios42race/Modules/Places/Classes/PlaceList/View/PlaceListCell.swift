@@ -9,6 +9,9 @@ import UIKit
 
 class PlaceListCell: UITableViewCell {
 
+    @IBOutlet weak var placeNameLbl: UILabel!
+    @IBOutlet weak var placeAddressLbl: UILabel!
+    @IBOutlet weak var placeImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +22,10 @@ class PlaceListCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func setupCell(data : PlaceModel) {
+        self.placeNameLbl.text = data.name
+        self.placeAddressLbl.text = data.address
+        self.placeImg.downloaded(from: data.imageUrl, contentMode: .scaleAspectFill)
+    }
 }
